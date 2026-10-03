@@ -1,0 +1,205 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #f3f4f6;
+  color: #111;
+  line-height: 1.5;
+}
+
+/* ── Layout ── */
+.form-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.form-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 420px;
+}
+
+.form-card h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: #1d4ed8;
+}
+
+.form-card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #374151;
+}
+
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* ── Header ── */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.header h1 { font-size: 1.5rem; }
+.header p  { color: #6b7280; font-size: 0.9rem; }
+.header-actions { display: flex; gap: 0.5rem; align-items: center; }
+
+/* ── Forms ── */
+form { display: flex; flex-direction: column; gap: 0.6rem; }
+
+label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+input, select, textarea {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  width: 100%;
+  background: #fff;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: 2px solid #3b82f6;
+  border-color: transparent;
+}
+
+textarea { resize: vertical; }
+
+/* ── Buttons ── */
+button {
+  padding: 0.5rem 1.1rem;
+  background: #1d4ed8;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+button:hover { background: #1e40af; }
+
+.btn-logout {
+  background: #ef4444;
+}
+.btn-logout:hover { background: #b91c1c; }
+
+.btn-back {
+  background: #6b7280;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+.btn-back:hover { background: #4b5563; }
+
+form button[type="submit"] {
+  margin-top: 0.5rem;
+}
+
+/* ── Messages ── */
+.error   { color: #dc2626; background: #fee2e2; border: 1px solid #fca5a5; border-radius: 6px; padding: 0.5rem 0.75rem; margin-bottom: 0.75rem; font-size: 0.9rem; }
+.success { color: #16a34a; background: #dcfce7; border: 1px solid #86efac; border-radius: 6px; padding: 0.5rem 0.75rem; margin-bottom: 0.75rem; font-size: 0.9rem; }
+
+/* ── Badges ── */
+.badge {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  margin-left: 0.4rem;
+}
+
+.priority-low    { background: #d1fae5; color: #065f46; }
+.priority-medium { background: #fef3c7; color: #92400e; }
+.priority-high   { background: #fee2e2; color: #991b1b; }
+
+.status-open      { background: #dbeafe; color: #1e40af; }
+.status-in-progress { background: #fef9c3; color: #713f12; }
+.status-resolved  { background: #dcfce7; color: #15803d; }
+
+/* ── Ticket cards ── */
+.ticket-list { display: flex; flex-direction: column; gap: 0.75rem; }
+
+.ticket-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ticket-card:hover { border-color: #3b82f6; }
+.ticket-card h3 { flex: 1; font-size: 1rem; font-weight: 600; }
+
+/* ── Table ── */
+.ticket-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+}
+
+.ticket-table th {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  background: #f9fafb;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6b7280;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.ticket-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #f3f4f6;
+  font-size: 0.9rem;
+}
+
+.ticket-table tr:hover td { background: #f9fafb; }
+
+/* ── Detail card ── */
+.detail-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.detail-card h2 { font-size: 1.3rem; }
+.detail-card p  { font-size: 0.95rem; }
+.detail-card button { width: fit-content; margin-top: 0.5rem; }
+
+/* ── Links ── */
+a { color: #1d4ed8; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+form + p { margin-top: 1rem; font-size: 0.9rem; text-align: center; }
